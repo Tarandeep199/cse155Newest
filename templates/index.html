@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Simulation</title>
+<title>URL List Simulation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	h1{
+		color: white;
+		background-color: #002856;
+		font-family: Arial, Helvetica, sans-serif;
+		border-bottom: 10px solid #DAA900;
+		text-align: center;
+	}
+	
+	body{
+		margin: 0;
+		color:black;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: white;
+		text-align: center;
+
+
+	}
+
+	.button{
+		color:white;
+		background-color: #002856;
+		text-align: center;
+		padding: 8px 16px;
+		cursor: pointer;
+	}
+</style>
 </head>
 <body>
-    <h1>URL Simulation</h1>
-    <p>This simulation will allow us to collect data on how users react to different types of clickable url links on a webpage</p>
-    <p>You will be shown a series of webpages, and your task is to click on the one that has the URL, "www.ucmerced.edu"</p>
-    <p>View Your results at the end!</p>
-    <a href="{{ url_for('sim1pg1') }}">START</a>
+	<h1>URL Simulation</h1>
+	<p>This simulation will allow us to collect data on how users react to different types of clickable url links on a webpage</p>
+	<p>You will be shown a series of webpages, and your task is to click on the one that has the URL, "www.ucmerced.edu"</p>
+	<p>View Your results at the end!</p>
+	<a href = "{{ url_for('sim1pg1') }}" class = "button">START</a>
+
+
 </body>
 </html>

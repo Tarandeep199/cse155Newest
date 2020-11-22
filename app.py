@@ -3,7 +3,7 @@ import time
 import settings
 import example
 from example import *
-
+import threading
 #sim1Time01 = 0
 #sim1Time02 = 0
 #sim1TimeFinal = 0
@@ -22,9 +22,11 @@ def hello():
 
 
 
+
 @app.route('/sim1page1', methods= ["GET","POST"])
 def sim1pg1():
-    startTracking()
+    #t1 = threading.Thread(startTracking())
+    #startTracking()
     settings.sim1Time01 = time.time()
     return render_template("Sim1page1.html")
 

@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scores!</title>
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	h1{
+		color: white;
+		background-color: #002856;
+		font-family: Arial, Helvetica, sans-serif;
+		border-bottom: 10px solid #DAA900;
+		text-align: center;
+	}
+	
+	body{
+		margin: 0;
+		color:black;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: white;
+		text-align: center;
+
+
+	}
+
+	.button{
+		color:white;
+		background-color: #002856;
+		text-align: center;
+		padding: 8px 16px;
+		cursor: pointer;
+	}
+</style>
+
 </head>
 <body>
     <h1>Time Spent on Simulation 1</h1>
-    <p>{{time1}}   Seconds</p>
-    <h1>Time Spent on Simulation 2</h1>
-    <p>{{time2}}   Seconds</p>
-    <a href="{{ url_for('hello') }}">RESTART</a>
+    <p>{{time1}} Seconds</p>
+    <h2>Time Spent on Simulation 2</h>
+    <p>{{time2}} Seconds</p>
+
+    <a href="{{ url_for('hello') }}" class = "button">RESTART</a>
 
 </body>
 </html>
