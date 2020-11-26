@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>END OF SIM 1</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
     <style>
         *{
             box-sizing: border-box;
@@ -36,8 +37,19 @@
         </style>
 </head>
 <body>
-    <h1>Finished Simulation 1!!! </h1>
-    <h2>Click continue to start the second part of the simulation</h2>
-    <a href = "{{ url_for('sim2pg1') }}"> Continue</a>
+    <section class="our-products">
+        <div class="container">
+
+          <article class="product shoe-red spacing">
+            <h3 class="product__title">FINSIHED SIM 1</h3>
+            <p class="product__description">Click Continue to start the second half </p>
+              
+              <a href="{{ url_for('sim2pg1') }}" class="btn">CONTINUE</a>
+          </article>
+  
+        </div>
+      </section>
+
+
 </body>
 </html>

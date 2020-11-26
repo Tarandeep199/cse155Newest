@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="/static/css/main.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scores!</title>
@@ -37,14 +38,24 @@
 
 </head>
 <body>
-    <h1> Simulation 1 Results </h1>
-	<p>Time Spent: {{time1}} Seconds</p>
-	<p>Points:{{pointsP1}} </p>
-    <h1> Simulation 2 Results </h1>
-	<p>Time Spent: {{time2}} Seconds</p>
-	<p>Points: {{pointsP2}}</p>
-
-    <a href="{{ url_for('hello') }}" class = "button">RESTART</a>
+	<section class="our-products">
+		<div class="container">
+		  <h2 class="section-title">Results</h2>
+  
+		  <article class="product shoe-red spacing">
+			<h3 class="product__title">Sim 1 Results</h3>
+			<p class="product__description">Time Spent: {{time1}} Seconds </p>
+			<p class="product__description">Points: {{pointsP1}}  </p>
+  
+		  </article>
+  
+		  <article class="product shoe-white shoe-left spacing">
+			<h3 class="product__title">Sim 2 Results</h3>
+			<p class="product__description">Time Spent: {{time2}} Seconds </p>
+			<p class="product__description">Points: {{pointsP2}}  </p>
+		  </article>
+		
+		  <a href="{{ url_for('hello') }}" class="btn">RESTART</a>
 
 </body>
 </html>

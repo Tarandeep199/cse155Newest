@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+	<link rel="stylesheet" href="/static/css/main.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RESULTS</title>
@@ -37,8 +37,21 @@
 </style>
 </head>
 <body>
-    <h1>Simulations Complete!</h1>
-    
-    <a href = "{{ url_for('userScores') }}" class = "button">View Results</a>
+
+	<section class="our-products">
+        <div class="container">
+
+          <article class="product shoe-red spacing">
+            <h3 class="product__title">Simulations Complete!</h3>
+              
+              <a href="{{ url_for('userScores') }}" class="btn">VIEW RESULTS</a>
+          </article>
+  
+        </div>
+      </section>
+
+
+
+
 </body>
 </html>

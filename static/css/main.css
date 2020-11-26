@@ -107,6 +107,7 @@ section {
 
 @supports (background-blend-mode: multiply) {
   .hero {
+
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-repeat: no-repeat;
