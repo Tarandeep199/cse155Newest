@@ -30,10 +30,8 @@ def hello():
 @app.route('/sim1page1', methods= ["GET","POST"])
 def sim1pg1():
     print("ok")
-    if request.method == "POST":
-        if request.a.get("submit_a"):
-            print("yeee")
-            settings.points1 = 2000
+
+    settings.points1 = 1
     #t1 = threading.Thread(startTracking())
     #t2 = threading.Thread(sim1pg1())
     #startTracking()

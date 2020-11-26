@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>URL List Simulation</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-	*{
-		box-sizing: border-box;
-	}
-	h1{
-		color: white;
-		background-color: #002856;
-		font-family: Arial, Helvetica, sans-serif;
-		border-bottom: 10px solid #DAA900;
-		text-align: center;
-	}
-	
-	body{
-		margin: 0;
-		color:black;
-		font-family: Arial, Helvetica, sans-serif;
-		background-color: white;
-		text-align: center;
-
-
-	}
-
-	.button{
-		color:white;
-		background-color: #002856;
-		text-align: center;
-		padding: 8px 16px;
-		cursor: pointer;
-	}
-	p{
-		margin:10;
-		padding:0;
-	}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title> GAZE TRACKING </title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/main.css" />
 </head>
-<body style="background-color:grey;">
-	<h1>URL Simulation</h1>
-	<h2>This simulation will allow us to collect data on how users react to different types of clickable url links on a webpage</h2>
-	<p>You will be shown a series of URL links, and your task is to click on the one that has the URL, "www.ucmerced.edu"</p>
-	<h3>View Your results at the end!</h3>
-	<a href = "{{ url_for('sim1pg1') }}" class = "button">START</a>
 
-	<div class = "row">
-		<div class = "column">
-			<p><img src="/desktop/NEWCSE155/cse155Newest/ex1.png"></p>
-		</div>
-		<div class = "column">
-			<p><img src="/12096/Desktop/newCSE155/cse155Newest/images" width ="970" height = "224"></p>
-		</div>
-	</div>
+<body>
+
+  <header class="hero">
+    <div class="container spacing">
+      <h1 class="primary-title">Gaze Tracking URL Simulation</h1>
+      <p>This simulation will allow us to collect data on how users react to different styles of webpages containing url links</p>
+      <a href="#" class="btn">SCROLL DOWN FOR MORE INFORMATION</a>
+    </div>
+  </header>
+  <main>
+
+    <section class="featured">
+      <div class="container">
+        <h2 class="section-title">Featured Elements</h2>
+        <div class="split">
+          <a href="#" class="featured__item">
+            <img src="/static/img/eye.png" alt="" class="featured__img">
+            <p class="featured__details"><span class="price">Eye Tracking</span></p>
+          </a>
+          <a href="#" class="featured__item">
+            <img src="/static/img/clock2.png" alt="" class="featured__img">
+            <p class="featured__details"><span class="price">Time Spent</span></p>
+          </a>
+          <a href="#" class="featured__item">
+            <img src="/static/img/x3.png" alt="" class="featured__img">
+            <p class="featured__details"><span class="price">Mistakes Made</span></p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="our-products">
+      <div class="container">
+        <h2 class="section-title">Project Details</h2>
+
+        <article class="product shoe-red spacing">
+          <img src="/static/img/brain1.png" alt="" class="product__image">
+          <h3 class="product__title">OUR MOTIVE</h3>
+          <p class="product__description">We would like to test whether further spaced out content
+            or closer together content on web pages make it easier to navigate. </p>
+
+        </article>
+
+        <article class="product shoe-white shoe-left spacing">
+          <img src="/static/img/game1.png" alt="" class="product__image">
+          <h3 class="product__title">HOW TO PLAY</h3>
+          <p class="product__description">You will be faced with TWO different simulations. The first one will feature closer together links.  The second will feature
+             a more spread out style.
+            On every page, click the link that says "www.ucmerced.edu" to advance.
+          </p>
+          
+        </article>
+
+        <article class="product shoe-blue spacing">
+          <h3 class="product__title">READY TO PLAY?</h3>
+          <p class="product__description">Click below to start the simulations. Good luck!</p>
+          <a href="{{ url_for('sim1pg1') }}" class="btn">START</a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
 </body>
 
 </html>

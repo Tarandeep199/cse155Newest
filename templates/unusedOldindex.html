@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>URL List Simulation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	h1{
+		color: white;
+		background-color: #002856;
+		font-family: Arial, Helvetica, sans-serif;
+		border-bottom: 10px solid #DAA900;
+		text-align: center;
+	}
+	
+	body{
+		margin: 0;
+		color:black;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color: white;
+		text-align: center;
+
+
+	}
+
+	.button{
+		color:white;
+		background-color: #002856;
+		text-align: center;
+		padding: 8px 16px;
+		cursor: pointer;
+	}
+	p{
+		margin:10;
+		padding:0;
+	}
+</style>
+</head>
+<body>
+	<h1>URL Simulation</h1>
+	<h2>This simulation will allow us to collect data on how users react to different types of clickable url links on a webpage</h2>
+	<p>You will be shown a series of URL links, and your task is to click on the one that has the URL, "www.ucmerced.edu"</p>
+	<h3>View Your results at the end!</h3>
+	<a href = "{{ url_for('sim1pg1') }}" class = "button">START</a>
+
+	<div class = "row">
+		<div class = "column">
+			<p><img src="/desktop/NEWCSE155/cse155Newest/ex1.png"></p>
+		</div>
+		<div class = "column">
+			<p><img src="/12096/Desktop/newCSE155/cse155Newest/images" width ="970" height = "224"></p>
+		</div>
+	</div>
+</body>
+
+</html>
