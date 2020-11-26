@@ -43,8 +43,8 @@ p { margin-top : -20px; }
 
 <div class="row">
   <div class="column">
-    <h2>Column 1</h2>
-	<p><a href="{{ url_for('sim1pg1') }}">www.github.com</a></p>
+	<h2>Column 1</h2>
+	<p method = "post"><a href="{{ url_for('sim1pg1') }}" name = "submit_a">www.github.com</a></p>
 	<p><a href="{{ url_for('sim1pg1') }}">www.Chegg.com</a></p>
 	<p><a href="{{ url_for('sim1pg1') }}">www.facebook.com</a></p>
 	<p><a href="{{ url_for('sim1pg1') }}">www.google.com</a></p>
@@ -54,6 +54,7 @@ p { margin-top : -20px; }
 	<p><a href="{{ url_for('sim1pg1') }}">www.nexusmods.com</a></p>
 	<p><a href="{{ url_for('sim1pg1') }}">www.stackoverflow.com</a></p>
 	<p><a href="{{ url_for('sim1pg1') }}">www.overleaf.com</a></p>
+	</form>
   </div>
   <div class="column">
 	<h2>Column 2</h2>

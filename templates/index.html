@@ -33,15 +33,27 @@
 		padding: 8px 16px;
 		cursor: pointer;
 	}
+	p{
+		margin:10;
+		padding:0;
+	}
 </style>
 </head>
-<body>
+<body style="background-color:grey;">
 	<h1>URL Simulation</h1>
-	<p>This simulation will allow us to collect data on how users react to different types of clickable url links on a webpage</p>
-	<p>You will be shown a series of webpages, and your task is to click on the one that has the URL, "www.ucmerced.edu"</p>
-	<p>View Your results at the end!</p>
+	<h2>This simulation will allow us to collect data on how users react to different types of clickable url links on a webpage</h2>
+	<p>You will be shown a series of URL links, and your task is to click on the one that has the URL, "www.ucmerced.edu"</p>
+	<h3>View Your results at the end!</h3>
 	<a href = "{{ url_for('sim1pg1') }}" class = "button">START</a>
 
-
+	<div class = "row">
+		<div class = "column">
+			<p><img src="/desktop/NEWCSE155/cse155Newest/ex1.png"></p>
+		</div>
+		<div class = "column">
+			<p><img src="/12096/Desktop/newCSE155/cse155Newest/images" width ="970" height = "224"></p>
+		</div>
+	</div>
 </body>
+
 </html>

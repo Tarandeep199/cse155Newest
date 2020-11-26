@@ -5,4 +5,7 @@ def init():
 
     global sim2Time01 
     global sim2Time02 
-    global sim2TimeFinal 
+    global sim2TimeFinal
+
+    global points1 
+    global points2
