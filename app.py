@@ -13,9 +13,6 @@ import threading
 #sim2TimeFinal = 0
 
 
-
-
-
 app = Flask(__name__)
 currentPage = "index.html"
 
@@ -30,21 +27,18 @@ def hello():
 @app.route('/sim1page1', methods= ["GET","POST"])
 def sim1pg1():
     print("ok")
-
     settings.points1 = 1
-    #t1 = threading.Thread(startTracking())
-    #t2 = threading.Thread(sim1pg1())
-    #startTracking()
     settings.sim1Time01 = time.time()
     return render_template("Sim1page1.html")
 
 @app.route('/sim1page2', methods= ["GET","POST"])
 def sim1pg2():
-    #print(sim1Time01)
+    settings.points1 = settings.points1 + 1
     return render_template("Sim1page2.html")
 
 @app.route('/sim1page3', methods= ["GET","POST"])
 def sim1pg3():
+    settings.points1 = settings.points1 + 1
     return render_template("Sim1page3.html")
 
 
@@ -58,10 +52,6 @@ def buffer():
 
 @app.route('/sim2page1', methods = ["GET", "POST"])
 def sim2pg1():
-    #Calulations for time spent on simulation 1
-    #settings.sim1Time02 = time.time()
-    #settings.sim1TimeFinal = settings.sim1Time02 - settings.sim1Time01
-    #print(sim1TimeFinal)
     settings.sim2Time01 = time.time()   
     settings.points2 = 1   
 
@@ -69,10 +59,12 @@ def sim2pg1():
 
 @app.route('/sim2page2', methods = ["GET", "POST"])
 def sim2pg2():
+    settings.points2 = settings.points2 + 1 
     return render_template("Sim2page2.html")
 
 @app.route('/sim2page3', methods = ["GET", "POST"])
 def sim2pg3():
+    settings.points2 = settings.points2 + 1 
     return render_template("Sim2page3.html")
 
 
