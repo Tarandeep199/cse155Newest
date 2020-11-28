@@ -26,7 +26,7 @@ def hello():
 
 @app.route('/sim1page1', methods= ["GET","POST"])
 def sim1pg1():
-    print("ok")
+    print("ok")  
     settings.points1 = 1
     settings.sim1Time01 = time.time()
     return render_template("Sim1page1.html")
