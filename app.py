@@ -18,27 +18,26 @@ currentPage = "index.html"
 
 @app.route('/')
 def hello():
+    print("We here")
+    settings.points1 = 0
+    settings.points2 = 0
     return render_template("index.html")
-
-
-
-
 
 @app.route('/sim1page1', methods= ["GET","POST"])
 def sim1pg1():
     print("ok")  
-    settings.points1 = 1
+    settings.points1 = settings.points1+1
     settings.sim1Time01 = time.time()
     return render_template("Sim1page1.html")
 
 @app.route('/sim1page2', methods= ["GET","POST"])
 def sim1pg2():
-    settings.points1 = settings.points1 + 1
+    settings.points1 = settings.points1+1
     return render_template("Sim1page2.html")
 
 @app.route('/sim1page3', methods= ["GET","POST"])
 def sim1pg3():
-    settings.points1 = settings.points1 + 1
+    settings.points1 = settings.points1+1
     return render_template("Sim1page3.html")
 
 
@@ -53,25 +52,26 @@ def buffer():
 @app.route('/sim2page1', methods = ["GET", "POST"])
 def sim2pg1():
     settings.sim2Time01 = time.time()   
-    settings.points2 = 1   
+    settings.points2 = settings.points2 +1
 
     return render_template("Sim2page1.html")
 
 @app.route('/sim2page2', methods = ["GET", "POST"])
 def sim2pg2():
-    settings.points2 = settings.points2 + 1 
+    settings.points2 = settings.points2 +1
     return render_template("Sim2page2.html")
 
 @app.route('/sim2page3', methods = ["GET", "POST"])
 def sim2pg3():
-    settings.points2 = settings.points2 + 1 
+    settings.points2 = settings.points2 +1
     return render_template("Sim2page3.html")
 
 
 
 @app.route('/results',methods = ["GET","POST"])
 def resultPage():
-
+    settings.points1 = settings.points1 - 3
+    settings.points2 = settings.points2 - 3
     settings.sim2Time02 = time.time()
     settings.sim2TimeFinal = round(settings.sim2Time02 - settings.sim2Time01,2)
    # print(sim2TimeFinal)
