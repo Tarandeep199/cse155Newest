@@ -1,17 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 import time
 import settings
-import example
-from example import *
-import threading
-#sim1Time01 = 0
-#sim1Time02 = 0
-#sim1TimeFinal = 0
-
-#sim2Time01 = 0
-#sim2Time02 = 0
-#sim2TimeFinal = 0
-
 
 app = Flask(__name__)
 currentPage = "index.html"
@@ -74,7 +63,6 @@ def resultPage():
     settings.points2 = settings.points2 - 3
     settings.sim2Time02 = time.time()
     settings.sim2TimeFinal = round(settings.sim2Time02 - settings.sim2Time01,2)
-   # print(sim2TimeFinal)
     return render_template("results.html")
 
 @app.route('/score',methods = ["GET","POST"])
